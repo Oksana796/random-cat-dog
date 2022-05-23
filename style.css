@@ -34,7 +34,8 @@ body {
   justify-content: center;
 }
 button {
-  background-color: #cdb7b5;
+  background-color: #fdc59c;
+  color: #816f26;
   width: 300px;
   font-size: 18px;
   margin: 10px;
@@ -47,4 +48,14 @@ button:active {
 }
 button:focus {
   outline: none;
+}
+
+@media (max-width: 600px) {
+  .every {
+    height: 200px;
+    width: 150px;
+  }
+  button {
+    width: 150px;
+  }
 }
