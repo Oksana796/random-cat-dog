@@ -1,20 +1,16 @@
-const catTotal = document.querySelector("#cat-total");
+const foxTotal = document.querySelector("#fox-total");
 const dogTotal = document.querySelector("#dog-total");
-const catBtn = document.querySelector("#cat-btn");
+const foxBtn = document.querySelector("#fox-btn");
 const dogBtn = document.querySelector("#dog-btn");
 
-catBtn.addEventListener("click", getRandomCat);
+foxBtn.addEventListener("click", getRandomFox);
 dogBtn.addEventListener("click", getRandomDog);
 
-function getRandomCat() {
-  fetch("https://aws.random.cat/meow")
+function getRandomFox() {
+  fetch("https://randomfox.ca/floof/")
     .then((res) => res.json())
     .then((data) => {
-      if (data.file.includes(".mp4")) {
-        getRandomCat();
-      } else {
-        catTotal.innerHTML = `<img src='${data.file}'/>`;
-      }
+      foxTotal.innerHTML = `<img src='${data.image}'/>`;
     });
 }
 
